@@ -40,6 +40,10 @@ form.addEventListener('submit', async (e) => {
             body: JSON.stringify({
                 prompt: prompt,
                 num_scenes: parseInt(numScenesInput.value),
+                enable_narration: document.getElementById('enable-narration').checked,
+                enable_subtitles: document.getElementById('enable-subtitles').checked,
+                enable_music: document.getElementById('enable-music').checked,
+                music_mood: document.getElementById('music-mood').value,
             }),
         });
 
@@ -131,3 +135,11 @@ function resetUI() {
     resultSection.classList.add('hidden');
     errorSection.classList.add('hidden');
 }
+
+// Toggle music mood selector visibility
+const enableMusicCheckbox = document.getElementById('enable-music');
+const musicMoodGroup = document.getElementById('music-mood-group');
+
+enableMusicCheckbox.addEventListener('change', () => {
+    musicMoodGroup.style.display = enableMusicCheckbox.checked ? 'block' : 'none';
+});

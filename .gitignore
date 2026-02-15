@@ -7,6 +7,10 @@ output/scripts/*
 !output/images/.gitkeep
 !output/videos/.gitkeep
 !output/scripts/.gitkeep
+output/audio/*
+!output/audio/.gitkeep
+assets/music/*
+!assets/music/.gitkeep
 .venv/
 venv/
 *.egg-info/

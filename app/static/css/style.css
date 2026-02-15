@@ -178,6 +178,56 @@ video {
     display: block;
 }
 
+.options-grid {
+    background: #1a1a2a;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.options-grid h3 {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 0.8rem;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+}
+
+.toggle input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #a855f7;
+    cursor: pointer;
+}
+
+.toggle-label {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.6rem;
+    background: #1e1e2e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
 .hidden {
     display: none;
 }

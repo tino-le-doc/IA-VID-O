@@ -27,6 +27,29 @@
                         <input type="range" id="num-scenes" min="3" max="10" value="5">
                         <span id="scenes-count">5</span>
                     </div>
+                    <div class="options-grid">
+                        <h3>Options</h3>
+                        <label class="toggle">
+                            <input type="checkbox" id="enable-narration" checked>
+                            <span class="toggle-label">Narration audio (voix off)</span>
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox" id="enable-subtitles" checked>
+                            <span class="toggle-label">Sous-titres</span>
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox" id="enable-music" checked>
+                            <span class="toggle-label">Musique de fond</span>
+                        </label>
+                        <div class="form-group" id="music-mood-group">
+                            <label for="music-mood">Ambiance musicale :</label>
+                            <select id="music-mood">
+                                <option value="ambient">Ambient / Calme</option>
+                                <option value="upbeat">Upbeat / Dynamique</option>
+                                <option value="cinematic">Cinématique / Épique</option>
+                            </select>
+                        </div>
+                    </div>
                     <button type="submit" id="generate-btn">Générer la vidéo</button>
                 </form>
             </section>

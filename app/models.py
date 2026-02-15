@@ -4,6 +4,10 @@ from pydantic import BaseModel
 class GenerateRequest(BaseModel):
     prompt: str
     num_scenes: int = 5
+    enable_narration: bool = True
+    enable_subtitles: bool = True
+    enable_music: bool = True
+    music_mood: str = "ambient"  # ambient, upbeat, cinematic
 
 
 class SceneResponse(BaseModel):

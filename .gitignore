@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+output/images/*
+output/videos/*
+output/scripts/*
+!output/images/.gitkeep
+!output/videos/.gitkeep
+!output/scripts/.gitkeep
+.venv/
+venv/
+*.egg-info/
+dist/
+build/

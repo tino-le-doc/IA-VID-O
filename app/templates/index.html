@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA-VID-O - Générateur de Vidéos IA</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IA-VID-O</h1>
+            <p class="subtitle">Génère des vidéos à partir de tes idées grâce à l'IA</p>
+        </header>
+
+        <main>
+            <!-- Input Form -->
+            <section id="input-section" class="card">
+                <h2>Décris ta vidéo</h2>
+                <form id="generate-form">
+                    <div class="form-group">
+                        <label for="prompt">Ton idée / prompt :</label>
+                        <textarea id="prompt" rows="4" placeholder="Ex: Une vidéo expliquant comment fonctionne l'intelligence artificielle, avec des visuels futuristes et des animations colorées..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="num-scenes">Nombre de scènes :</label>
+                        <input type="range" id="num-scenes" min="3" max="10" value="5">
+                        <span id="scenes-count">5</span>
+                    </div>
+                    <button type="submit" id="generate-btn">Générer la vidéo</button>
+                </form>
+            </section>
+
+            <!-- Progress -->
+            <section id="progress-section" class="card hidden">
+                <h2>Génération en cours</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p id="progress-message">Démarrage...</p>
+                <p id="progress-percent">0%</p>
+            </section>
+
+            <!-- Script Preview -->
+            <section id="script-section" class="card hidden">
+                <h2 id="script-title">Script</h2>
+                <p id="script-description"></p>
+                <div id="scenes-list"></div>
+            </section>
+
+            <!-- Video Result -->
+            <section id="result-section" class="card hidden">
+                <h2>Ta vidéo est prête !</h2>
+                <video id="result-video" controls></video>
+                <a id="download-btn" class="btn" download>Télécharger la vidéo</a>
+            </section>
+
+            <!-- Error -->
+            <section id="error-section" class="card hidden">
+                <h2>Erreur</h2>
+                <p id="error-message"></p>
+                <button onclick="resetUI()" class="btn">Réessayer</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
